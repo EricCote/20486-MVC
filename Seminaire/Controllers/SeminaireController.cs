@@ -18,6 +18,27 @@ namespace Seminaire.Controllers
             return View(liste);
         }
 
+        // GET: Seminaire/details/5
+        public ActionResult Details(int id)
+        {
+            //1.vérifier que le séminaire existe.
+            //2.aller chercher le seminaire
+
+            SeminaireContext db = new SeminaireContext();
+            Conference conf =   db.Conferences.Find(id);
+
+            if (conf == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                return View(conf);
+            }
+        }
+
+
+
 
         public ActionResult Add(int i, int j)
         {

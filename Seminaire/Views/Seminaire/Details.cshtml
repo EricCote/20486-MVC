@@ -1,0 +1,39 @@
+﻿@using Seminaire.Models
+@using System.Globalization
+
+@model Conference
+
+@{
+    ViewBag.Title = "Détails de la conférence " + Model.Nom;
+    var langue = new CultureInfo("fr-CA");
+}
+
+<h2>Détails @Model.Nom</h2>
+
+<div>
+    <h3>@Model.Nom</h3>
+    <p><b>@Model.Lieu</b></p>
+    <p>
+        <i>
+            @Model.Date.ToString("D", langue),
+            @Model.Date.ToString("t", langue)
+            (@Model.Duree.TotalMinutes minutes)
+        </i>
+    </p>
+    <p>@Model.Description</p>
+    <hr />
+
+    <h4>Inscrivez quelqu'un</h4>
+    @using (Html.BeginForm("Create","Seminaire")) { 
+
+        <fieldset>
+            <legend>Personne:</legend>
+            Nom: <input type="text" name="nom" size="30"><br />
+            Courriel: <input type="text" name="courriel"  size="30"><br />
+            Téléphone: <input type="text" name="telephone" size="10"> <br />
+            <input type="submit" name="Inscrire" />
+        </fieldset>
+    }
+
+</div>
+

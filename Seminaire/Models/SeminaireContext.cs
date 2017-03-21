@@ -17,5 +17,20 @@ namespace Seminaire.Models
         }
 
         public DbSet<Conference> Conferences { get; set; }
+        public DbSet<Participant> Participants { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Conference>()
+           .HasMany(c => c.Participants)
+           .WithMany(p => p.Conferences)
+           .Map(m => m.MapLeftKey("ConferenceId")
+                    .MapRightKey("ParticipantId")
+                    .ToTable("Inscription"));
+
+        }
+
     }
 }

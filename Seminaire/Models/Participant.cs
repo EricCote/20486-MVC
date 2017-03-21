@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -13,8 +14,11 @@ namespace Seminaire.Models
         }
 
         public int ParticipantId { get; set; }
+        [StringLength(50)]
         public string Nom { get; set; }
+        [StringLength(100)]
         public string Courriel { get; set; }
+        [StringLength(15)]
         public string Telephone { get; set; }
 
         public virtual ICollection<Conference> Conferences {

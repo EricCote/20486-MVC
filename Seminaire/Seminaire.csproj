@@ -184,6 +184,14 @@
     <Compile Include="Migrations\201703211602108_ajouter traduction.Designer.cs">
       <DependentUpon>201703211602108_ajouter traduction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703211849206_ajouter Participants.cs" />
+    <Compile Include="Migrations\201703211849206_ajouter Participants.Designer.cs">
+      <DependentUpon>201703211849206_ajouter Participants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703211902457_Longueur String.cs" />
+    <Compile Include="Migrations\201703211902457_Longueur String.Designer.cs">
+      <DependentUpon>201703211902457_Longueur String.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ListeConferences.cs" />
     <Compile Include="Models\Conference.cs" />
@@ -269,6 +277,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Seminaire\Index.cshtml" />
     <Content Include="Views\Seminaire\Add.cshtml" />
+    <Content Include="Views\Seminaire\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -286,6 +295,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703211602108_ajouter traduction.resx">
       <DependentUpon>201703211602108_ajouter traduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703211849206_ajouter Participants.resx">
+      <DependentUpon>201703211849206_ajouter Participants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703211902457_Longueur String.resx">
+      <DependentUpon>201703211902457_Longueur String.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

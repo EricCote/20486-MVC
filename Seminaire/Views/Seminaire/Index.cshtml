@@ -11,7 +11,8 @@
 @foreach (Conference conf in Model)
 { 
    <div>
-      <h3>@conf.Nom</h3>
+      <h3>@Html.ActionLink(conf.Nom,"Details",
+                           new { id=conf.ConferenceId})</h3>
       <p><b>@conf.Lieu</b></p> 
       <p><i>@conf.Date.ToString("D",langue), 
             @conf.Date.ToString("t",langue) 
@@ -20,6 +21,7 @@
       <p>@conf.Description</p>
       <hr />
    </div>
+
 }
 
 
