@@ -190,6 +190,7 @@
     <Compile Include="Models\Identite\AccountViewModels.cs" />
     <Compile Include="Models\Identite\IdentityModels.cs" />
     <Compile Include="Models\Identite\ManageViewModels.cs" />
+    <Compile Include="Models\Participant.cs" />
     <Compile Include="Models\SeminaireContext.cs" />
     <Compile Include="Models\SeminaireInit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

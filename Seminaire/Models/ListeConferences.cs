@@ -40,5 +40,8 @@ namespace Seminaire.Models
             this.Add(conf2);
             this.Add(conf3);
         }
+
+
+
     }
 }
