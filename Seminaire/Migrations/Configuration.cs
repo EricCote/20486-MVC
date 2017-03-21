@@ -20,7 +20,7 @@ namespace Seminaire.Migrations
             {
                 ConferenceId = 1,
                 Nom = "C# expliqué aux gestionnaires",
-                Description = "jkl lflasjfl asldfj jkl;dfj l;asdj l;fjasdlfj asdl;jksdlfjsdklfjlsdfjoifjowefj lsdk ",
+                Description = "Ce séminaire explique à des gestionnaires comment utiliser C# pour que les développeurs soient plus productifs. Nous allons parler du langage C#, le comparer au langage VB.  Nous parlerons de compilation et de déploiement.",
                 Lieu = "Salle 102",
                 Date = new DateTime(2017, 04, 12, 13, 00, 00),
                 Duree = new TimeSpan(1, 0, 0)
@@ -29,7 +29,7 @@ namespace Seminaire.Migrations
             {
                 ConferenceId = 2,
                 Nom = "Comment détecter un fraudeur",
-                Description = "jkl lflasjfl asldfj jkl;dfj l;asdj l;fjasdlfj asdl;jksdlfjsdklfjlsdfjoifjowefj lsdk ",
+                Description = "Les fraudeurs sont parmis nous. Ils nous font du tord. Ils nous font mal. Il faut donc les éviter. Mais pour cela, il faut les reconnaitre.  Nous allons donc énumérer toutes les caractéristiques pour que l'on puisse identifier les fraudeurs parmi nous.",
                 Lieu = "Salle 103",
                 Date = new DateTime(2017, 04, 13, 13, 00, 00),
                 Duree = new TimeSpan(1, 0, 0)
@@ -38,7 +38,7 @@ namespace Seminaire.Migrations
             {
                 ConferenceId = 3,
                 Nom = "Les nouvelles règles fiscales",
-                Description = "jkl lflasjfl asldfj jkl;dfj l;asdj l;fjasdlfj asdl;jksdlfjsdklfjlsdfjoifjowefj lsdk ",
+                Description = "Les règles fiscales changent à chaque année.  Connaissez-vous les nouvelles règles fiscales de l'année 2017? Nous allons énumerer les éléments de la dernière mise à jour des règles fiscales du gouvernement du Québec. Ce sera très intéressant.",
                 Lieu = "Salle 104",
                 Date = new DateTime(2017, 04, 3, 13, 00, 00),
                 Duree = new TimeSpan(2, 0, 0)

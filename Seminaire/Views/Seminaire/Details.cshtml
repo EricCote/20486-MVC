@@ -1,6 +1,4 @@
-﻿@using Seminaire.Models
-@using System.Globalization
-
+﻿
 @model Conference
 
 @{
@@ -24,17 +22,56 @@
     <hr />
 
     <h4>Inscrivez quelqu'un</h4>
-    @using (Html.BeginForm("Create","Seminaire",
-                    new {id=Model.ConferenceId})) {
+    @using (Html.BeginForm("Create", "Seminaire",
+                                new { id = Model.ConferenceId },
+                                FormMethod.Post, 
+                                new {@class="form-horizontal"}))
+    {
 
         <fieldset>
-            <legend>Personne:</legend>
-            Nom: <input type="text" name="nom" size="30"><br />
-            Courriel: <input type="text" name="courriel"  size="30"><br />
-            Téléphone: <input type="text" name="telephone" size="10"> <br />
-            <input type="submit" name="Inscrire" />
-        </fieldset>
+            <legend>Inscription</legend>
+            <div class="form-group">
+                <label for="nom" class="col-lg-1 col-md-2 control-label">
+                    Nom
+                </label>
+                <div class="col-lg-11 col-md-10">
+                    <input type="text"
+                           name="nom"
+                           id="nom"
+                           class="form-control" />
+                    <span use="error"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="courriel" class="col-lg-1 col-md-2 control-label">
+                    Courriel
+                </label>
+                <div class="col-lg-11 col-md-10">
+                    <input type="text"
+                           name="courriel"
+                           id="courriel"
+                           class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tel" class="col-lg-1 col-md-2 control-label">
+                    Téléphone
+                </label>
+                <div class="col-lg-11 col-md-10">
+                    <input type="text"
+                           name="telephone"
+                           id="tel"
+                           class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-11 col-md-10 col-lg-offset-1 col-md-offset-2" >
+                    <input type="submit"
+                           name="Inscrire"
+                           class="btn btn-default btn-primary btn-lg" />
+                </div>
+            </div>
+</fieldset>
     }
 
 </div>
-
