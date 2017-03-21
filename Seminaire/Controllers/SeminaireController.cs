@@ -38,6 +38,35 @@ namespace Seminaire.Controllers
         }
 
 
+        //POST: Seminaire/Create/5
+        [HttpPost()]
+        public ActionResult Create(Participant part, int id)
+        {
+            SeminaireContext db = new SeminaireContext();
+
+            if (!ModelState.IsValid)
+            {
+               return View("CreateFail");
+            }
+            Conference conf = db.Conferences.Find(id);
+            if (conf == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                part.Conferences.Add(conf);
+                db.Participants.Add(part);
+                db.SaveChanges();
+                return View("CreateSucces");
+
+            }
+               
+           
+
+        }
+
+
 
 
         public ActionResult Add(int i, int j)

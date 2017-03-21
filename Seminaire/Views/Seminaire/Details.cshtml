@@ -24,7 +24,8 @@
     <hr />
 
     <h4>Inscrivez quelqu'un</h4>
-    @using (Html.BeginForm("Create","Seminaire")) { 
+    @using (Html.BeginForm("Create","Seminaire",
+                    new {id=Model.ConferenceId})) {
 
         <fieldset>
             <legend>Personne:</legend>

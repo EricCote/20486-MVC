@@ -14,8 +14,10 @@ namespace Seminaire.Models
         }
 
         public int ParticipantId { get; set; }
+        [Required()]
         [StringLength(50)]
         public string Nom { get; set; }
+        [Required()]
         [StringLength(100)]
         public string Courriel { get; set; }
         [StringLength(15)]

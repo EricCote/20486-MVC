@@ -192,6 +192,10 @@
     <Compile Include="Migrations\201703211902457_Longueur String.Designer.cs">
       <DependentUpon>201703211902457_Longueur String.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703212026499_Required.cs" />
+    <Compile Include="Migrations\201703212026499_Required.Designer.cs">
+      <DependentUpon>201703212026499_Required.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ListeConferences.cs" />
     <Compile Include="Models\Conference.cs" />
@@ -278,6 +282,8 @@
     <Content Include="Views\Seminaire\Index.cshtml" />
     <Content Include="Views\Seminaire\Add.cshtml" />
     <Content Include="Views\Seminaire\Details.cshtml" />
+    <Content Include="Views\Seminaire\CreateFail.cshtml" />
+    <Content Include="Views\Seminaire\CreateSucces.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703211902457_Longueur String.resx">
       <DependentUpon>201703211902457_Longueur String.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703212026499_Required.resx">
+      <DependentUpon>201703212026499_Required.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
