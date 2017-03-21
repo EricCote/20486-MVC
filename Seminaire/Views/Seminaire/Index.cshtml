@@ -1,0 +1,59 @@
+﻿@using Seminaire.Models
+@using System.Globalization
+
+@model IEnumerable<Conference>
+@{
+    ViewBag.Title = "Index";
+    var langue = new CultureInfo("fr-CA");
+}
+
+<h2>Liste des Séminaires</h2>
+@foreach (Conference conf in Model)
+{ 
+   <div>
+      <h3>@conf.Nom</h3>
+      <p><b>@conf.Lieu</b></p> 
+      <p><i>@conf.Date.ToString("D",langue), 
+            @conf.Date.ToString("t",langue) 
+            (@conf.Duree.TotalMinutes minutes)
+      </i></p> 
+      <p>@conf.Description</p>
+      <hr />
+   </div>
+}
+
+
+
+
+
+
+
+
+<h3>Séminaire 1</h3>
+<p><i>4 avril 2016</i></p>
+<p> 
+    lsjkdfhlfls klf klasdjf sjklfh klsfh skldfh askldfhasklfh askldfh klasdfh sdkla 
+    asd fsadfsf sdf sdf  asdfsdf 
+    asd fasd fasd fasdfsdf sadf  sdf
+</p>
+
+<hr />
+<h3>Séminaire 2</h3>
+<p><i>6 avril 2016</i></p>
+<p>
+    lsjkdfhlfls klf klasdjf sjklfh klsfh skldfh askldfhasklfh askldfh klasdfh sdkla
+    asd fsadfsf sdf sdf  asdfsdf
+    asd fasd fasd fasdfsdf sadf  sdf
+</p>
+
+<hr />
+<h3>Séminaire 3</h3>
+<p><i>23 avril 2016</i></p>
+<p>
+    lsjkdfhlfls klf klasdjf sjklfh klsfh skldfh askldfhasklfh askldfh klasdfh sdkla
+    asd fsadfsf sdf sdf  asdfsdf
+    asd fasd fasd fasdfsdf sadf  sdf
+</p>
+
+
+
