@@ -150,7 +150,7 @@ etc
 
 
 Global.asax
---- Application_Start
+- Application_Start
 
 Startup.cs
 
@@ -158,9 +158,9 @@ Startup.cs
 ----------------------------------------------------------
 # Data
 
-ADO.NET: ensemble de classes pour travailler avec les bases de données.
+_ADO.NET_: ensemble de classes pour travailler avec les bases de données.
 
--ADO.NET Providers: Classes pour travailler avec des BD spécifiques.
+_ADO.NET Providers_: Classes pour travailler avec des BD spécifiques.
          Connection
          DataReader
          Command
@@ -241,47 +241,30 @@ Il est possible de Mettre-à-jour en direct, ou de générer un script SQL.
 
 
 
+----------------
 
+CSS: Cascading Style Sheet.
 
+Cela définit un ensemble de règles pour formatter des éléments
 
+On indique un sélecteur sur lequel on place les règles.
+ex: 
+- Nom d'élément (p, h1)
+- Classe  (.classe .vert)
+- id    (#bouton #txtnom)
 
+On peut combiner les sélecteurs.
 
+On définit un enseble de règle pour checun des sélecteur.
+propriété: valeur
 
+Le plus difficile, c'est l'ordre dans lequel les règles son appliquées. Il y a une méthode dans lequel les règles sont appilquées. (plus spécifique)
 
+---------------
 
+# Bootstrap
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Une librairie CSS qui permet de formatter la plupart des sites web dans un look propre, responsive, conçu pour les mobiles.
 
 
 
@@ -289,52 +272,6 @@ Il est possible de Mettre-à-jour en direct, ou de générer un script SQL.
 
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4.6.2
-
-
-
-
-
-
-
-
-
 
 
 

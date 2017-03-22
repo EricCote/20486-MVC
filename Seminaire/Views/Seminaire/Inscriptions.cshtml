@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Seminaire.Models.Participant>
+
+@{
+    ViewBag.Title = "Inscriptions";
+}
+
+<h2>Inscriptions</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Courriel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Courriel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telephone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ParticipantId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ParticipantId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ParticipantId })
+        </td>
+    </tr>
+}
+
+</table>

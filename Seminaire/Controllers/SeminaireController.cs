@@ -68,6 +68,20 @@ namespace Seminaire.Controllers
 
 
 
+        public ActionResult Inscriptions(int id)
+        {
+            SeminaireContext db = new SeminaireContext();
+            Conference conf = db.Conferences.Find(id);
+            if (conf == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                return View(conf.Participants);
+            }
+        }
+
 
         public ActionResult Add(int i, int j)
         {

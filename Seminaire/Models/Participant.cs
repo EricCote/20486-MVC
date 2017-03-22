@@ -18,9 +18,12 @@ namespace Seminaire.Models
         [StringLength(50)]
         public string Nom { get; set; }
         [Required()]
+        [DataType(DataType.EmailAddress)]
         [StringLength(100)]
         public string Courriel { get; set; }
         [StringLength(15)]
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name ="Téléphone", ShortName = "Tél")]
         public string Telephone { get; set; }
 
         public virtual ICollection<Conference> Conferences {
