@@ -7,116 +7,110 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Seminaire.Models;
-using Seminaire.Filters;
 
 namespace Seminaire.Controllers
 {
-
-    public class GestionSeminaireController : Controller
+    public class GestionParticipantController : Controller
     {
         private SeminaireContext db = new SeminaireContext();
 
-      
-
-        // GET: GestionSeminaire
-        [Francais(Exception=true)]
+        // GET: GestionParticipant
         public ActionResult Index()
         {
-            return View(db.Conferences.ToList());
+            return View(db.Participants.ToList());
         }
 
-        // GET: GestionSeminaire/Details/5
+        // GET: GestionParticipant/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Conference conference = db.Conferences.Find(id);
-            if (conference == null)
+            Participant participant = db.Participants.Find(id);
+            if (participant == null)
             {
                 return HttpNotFound();
             }
-            return View(conference);
+            return View(participant);
         }
 
-        // GET: GestionSeminaire/Create
-  
+        // GET: GestionParticipant/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: GestionSeminaire/Create
+        // POST: GestionParticipant/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ConferenceId,Nom,Description,Date,Duree,Lieu,Traduction")] Conference conference)
+        public ActionResult Create([Bind(Include = "ParticipantId,Nom,Courriel,Telephone")] Participant participant)
         {
             if (ModelState.IsValid)
             {
-                db.Conferences.Add(conference);
+                db.Participants.Add(participant);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(conference);
+            return View(participant);
         }
 
-        // GET: GestionSeminaire/Edit/5
+        // GET: GestionParticipant/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Conference conference = db.Conferences.Find(id);
-            if (conference == null)
+            Participant participant = db.Participants.Find(id);
+            if (participant == null)
             {
                 return HttpNotFound();
             }
-            return View(conference);
+            return View(participant);
         }
 
-        // POST: GestionSeminaire/Edit/5
+        // POST: GestionParticipant/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ConferenceId,Nom,Description,Date,Duree,Lieu,Traduction")] Conference conference)
+        public ActionResult Edit([Bind(Include = "ParticipantId,Nom,Courriel,Telephone")] Participant participant)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(conference).State = EntityState.Modified;
+                db.Entry(participant).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(conference);
+            return View(participant);
         }
 
-        // GET: GestionSeminaire/Delete/5
+        // GET: GestionParticipant/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Conference conference = db.Conferences.Find(id);
-            if (conference == null)
+            Participant participant = db.Participants.Find(id);
+            if (participant == null)
             {
                 return HttpNotFound();
             }
-            return View(conference);
+            return View(participant);
         }
 
-        // POST: GestionSeminaire/Delete/5
+        // POST: GestionParticipant/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Conference conference = db.Conferences.Find(id);
-            db.Conferences.Remove(conference);
+            Participant participant = db.Participants.Find(id);
+            db.Participants.Remove(participant);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

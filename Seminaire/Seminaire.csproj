@@ -169,11 +169,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GestionParticipantController.cs" />
     <Compile Include="Controllers\GestionSeminaireController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PhpController.cs" />
     <Compile Include="Controllers\SeminaireController.cs" />
+    <Compile Include="Filters\FrancaisAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -297,6 +299,17 @@
     <Content Include="Views\GestionSeminaire\Details.cshtml" />
     <Content Include="Views\GestionSeminaire\Edit.cshtml" />
     <Content Include="Views\GestionSeminaire\Index.cshtml" />
+    <Content Include="Views\GestionParticipant\Create.cshtml" />
+    <Content Include="Views\GestionParticipant\Delete.cshtml" />
+    <Content Include="Views\GestionParticipant\Details.cshtml" />
+    <Content Include="Views\GestionParticipant\Edit.cshtml" />
+    <Content Include="Views\GestionParticipant\Index.cshtml" />
+    <Content Include="Views\GestionSeminaire\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\GestionSeminaire\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\GestionSeminaire\DisplayTemplates\DateTimeRouge.cshtml" />
+    <Content Include="Views\GestionSeminaire\EditorTemplates\DateTimeRouge.cshtml" />
+    <Content Include="Views\GestionSeminaire\EditorTemplates\Date.cshtml" />
+    <Content Include="Views\GestionSeminaire\DisplayTemplates\Participants.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

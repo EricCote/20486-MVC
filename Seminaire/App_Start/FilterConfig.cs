@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Seminaire.Filters;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Seminaire
@@ -7,6 +8,7 @@ namespace Seminaire
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            filters.Add(new FrancaisAttribute());
             filters.Add(new HandleErrorAttribute());
         }
     }

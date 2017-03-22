@@ -1,0 +1,6 @@
+﻿@model DateTime?
+
+@Html.TextBox("", Model,
+    htmlAttributes: new {@class="form-control",
+                         style ="color:red;",
+                         data_val_date= "Entrez une date valide" }) 

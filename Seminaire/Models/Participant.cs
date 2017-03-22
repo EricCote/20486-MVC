@@ -14,7 +14,7 @@ namespace Seminaire.Models
         }
 
         public int ParticipantId { get; set; }
-        [Required()]
+        [Required(ErrorMessage ="Le nom est obligatoire!")]
         [StringLength(50)]
         public string Nom { get; set; }
         [Required()]

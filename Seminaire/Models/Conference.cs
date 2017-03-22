@@ -19,12 +19,16 @@ namespace Seminaire.Models
         public string Nom { get; set; }
         [StringLength(1000)]
         public string Description { get; set; }
+        [Display(Name ="Date et Heure")]
+        [DataType(DataType.DateTime,ErrorMessage ="Entrez une Date en français")]
+        [UIHint("DateTimeRouge")]
         public DateTime Date { get; set; }
         public TimeSpan Duree { get; set; }
         [StringLength(30)]
         public string Lieu { get; set; }
         public bool Traduction { get; set; }
 
+        [UIHint("Participants")]
         public virtual ICollection<Participant> Participants {
                                                      get; set; }
     }
