@@ -22,6 +22,9 @@ namespace Seminaire.Controllers
         [Francais(Exception=true)]
         public ActionResult Index()
         {
+            ViewBag.Aujourdhui = DateTime.Now;
+           // ViewData["Aujourdhui"] = DateTime.Now;
+
             return View(db.Conferences.ToList());
         }
 
