@@ -236,6 +236,7 @@
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\holder.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
@@ -311,6 +312,7 @@
     <Content Include="Views\GestionSeminaire\EditorTemplates\DateTimeRouge.cshtml" />
     <Content Include="Views\GestionSeminaire\EditorTemplates\Date.cshtml" />
     <Content Include="Views\GestionSeminaire\DisplayTemplates\Participants.cshtml" />
+    <Content Include="Views\Seminaire\_SeminaireCarousel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
