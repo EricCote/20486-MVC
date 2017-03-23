@@ -26,10 +26,21 @@
             @Html.DisplayFor(modelItem => item.Telephone)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", "GestionParticipant", new { id=item.ParticipantId }) |
-            @Html.ActionLink("Details", "Details", "GestionParticipant", new { id=item.ParticipantId }) |
-            @Html.ActionLink("Delete", "Delete", "GestionParticipant", new { id=item.ParticipantId })
+            @Html.ActionLink(" ", "Edit", "GestionParticipant",
+               new { id = item.ParticipantId },
+               new { @class = "btn btn-primary glyphicon glyphicon-pencil" })
+            @Html.ActionLink(" ", "Details", "GestionParticipant",
+               new { id = item.ParticipantId },
+               new { @class = "btn btn-primary glyphicon glyphicon-list-alt" })
+            @Html.ActionLink(" ", "Delete", "GestionParticipant",
+               new { id = item.ParticipantId },
+               new { @class = "btn btn-primary glyphicon glyphicon-remove" })
         </td>
+
+
+
+
+
     </tr>
 }
 

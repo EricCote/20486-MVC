@@ -53,9 +53,15 @@
             @Html.DisplayFor(modelItem => item.Traduction)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ConferenceId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ConferenceId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ConferenceId })
+            @Html.ActionLink(" ", "Edit", 
+               new { id = item­.ConferenceId },
+               new { @class = "btn btn-primary glyphicon glyphicon-pencil" })
+            @Html.ActionLink(" ", "Details", 
+               new { id = item.ConferenceId },
+               new { @class = "btn btn-primary glyphicon glyphicon-list-alt" })
+            @Html.ActionLink(" ", "Delete", 
+               new { id = item.ConferenceId },
+               new { @class = "btn btn-primary glyphicon glyphicon-remove" })
         </td>
     </tr>
 }

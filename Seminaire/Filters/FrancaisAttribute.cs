@@ -19,8 +19,8 @@ namespace Seminaire.Filters
             this.Exception = false;
         }
 
-
-
+      
+     
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             if (!Exception)
