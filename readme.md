@@ -293,6 +293,7 @@ JSON: Format de données Similaire à XML,
 
 
 
+	  https://downloads.cdn.telerik.com/2d31863be6ea2629f01d7b7c5b1819f9_telerik.kendoui.professional.2017.1.223.trial.zip_2017.1.223?Expires=1490454081&Signature=sA~IK-RPqkoMhpPHcmUYLWchnHzmaiYSJCqZcjmfW1IDGlRJyCr3um1abSGNBKNommnQiLPleINyn-pKYhpi7gbmAhQ1F~BLoDg8Inz8rrVPUwIsl65lp1HtOeZzrS2SWjzsvQZk1m0cXJh1TjeCe1I7Au96r5hwmg6FlQMjli2DT7uWyOROZDOsBhZuxf5OD~o1eDGks8LZQxr4l8-7q2DBfcGNb5ekgiPIQLzBLu2umjyqtdAvvrmiFnBI7vXL~MtRUl~6vTDcXX-xQsYcqeuFqabB1b86WmGNoKzyNx1YNFRjUGekznwUgVFafyGjI2uhs3z2~Su-ujFvJuJV5g__&Key-Pair-Id=APKAJILH73OFECZJOO3Q
 
 
 

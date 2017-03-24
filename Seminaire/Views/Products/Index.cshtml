@@ -9,6 +9,14 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+<p>
+    @Html.DropDownList("Filtre",
+                       (SelectList) ViewBag.ListCategories,
+                       new { @class= "form-control" })
+
+</p>
+
 <table class="table">
     <tr>
         <th>

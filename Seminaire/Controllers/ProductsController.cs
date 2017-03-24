@@ -19,6 +19,11 @@ namespace Seminaire.Controllers
         public ActionResult Index()
         {
             var products = repo.GetAllProducts().Include(p => p.ProductModel);
+            ViewBag.ListCategories = new SelectList(
+                repo.GetAllCategories().
+                     OrderBy(c=>c.CategoryID).
+                     Skip(4), 
+                "Name", "Name", 1);
             return View(products.ToList());
         }
 
