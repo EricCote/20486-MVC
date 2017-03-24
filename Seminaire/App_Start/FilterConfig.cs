@@ -10,6 +10,7 @@ namespace Seminaire
         {
             filters.Add(new FrancaisAttribute());
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new AuthorizeAttribute());
         }
     }
 }

@@ -27,7 +27,9 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Séminaires", "Index", "Seminaire")</li>
+                    @if (User.IsInRole("BUILTIN\\Users")) { 
                     <li>@Html.ActionLink("Produits", "Index", "Products")</li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

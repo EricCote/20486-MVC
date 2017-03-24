@@ -10,6 +10,7 @@ using RepositoryAW;
 
 namespace Seminaire.Controllers
 {
+    [Authorize(Roles = @"BUILTIN\Users")]
     public class ProductsController : Controller
     {
         private ContextAW db = new ContextAW();
