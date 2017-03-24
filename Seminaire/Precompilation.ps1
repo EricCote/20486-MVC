@@ -7,7 +7,7 @@
 #vbcsCompiler.exe: compilateur de .aspx et autres
 #csi.exe:          ligne de commande interactive en c#
 
-cd .\seminaire\bin\roslyn
+cd c:\code\mvc-20486\seminaire\bin\roslyn
 
 #32 bit
 & C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe install csc.exe

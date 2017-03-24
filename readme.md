@@ -267,6 +267,32 @@ Le plus difficile, c'est l'ordre dans lequel les règles son appliquées. Il y a u
 Une librairie CSS qui permet de formatter la plupart des sites web dans un look propre, responsive, conçu pour les mobiles.
 
 
+---------------------
+
+
+Web API:  Technologie d'invocation à distance qui "remplace" WCF.  
+
+Choses uniques à WCF: Transactions, Resilience, Message Queuing, custom Encryption, message Encryption, federated authentication
+
+Web API:  Encrypté HTTPS, identité gérées par des headers OAuth
+
+
+Messages qui utilisent HTTP + Approche REST + JSON
+
+REST: Un URL représente une ressource que l'on travaille avec un verbe HTTP
+GET     Read
+POST    Add
+PUT     Update
+DELETE  Delete
+PATCH   Update Partiel
+HEAD
+OPTION
+
+JSON: Format de données Similaire à XML, 
+      plus petit, plus simple, compatible avec Javascript
+
+
+
 
 
 
