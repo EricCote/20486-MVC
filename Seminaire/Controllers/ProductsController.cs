@@ -23,7 +23,7 @@ namespace Seminaire.Controllers
                 repo.GetAllCategories().
                      OrderBy(c=>c.CategoryID).
                      Skip(4), 
-                "Name", "Name", 1);
+                "CategoryID", "Name", 1);
             return View(products.ToList());
         }
 

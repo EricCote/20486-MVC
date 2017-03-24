@@ -248,12 +248,21 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\kendo.all.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Styles\default\loading-image.gif" />
+    <Content Include="Styles\images\back.png" />
+    <Content Include="Styles\images\kendoui.svg" />
+    <Content Include="Styles\images\wp8_icons.png" />
+    <Content Include="Styles\images\wp8_inverseicons.png" />
+    <Content Include="Styles\kendo.common.min.css" />
+    <Content Include="Styles\kendo.default.min.css" />
+    <Content Include="Styles\kendo.default.mobile.min.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -320,6 +329,12 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Styles\kendo.common.min.css.map" />
+    <Content Include="Styles\kendo.default.min.css.map" />
+    <Content Include="Styles\kendo.default.mobile.min.css.map" />
+    <Content Include="Scripts\kendo.all.min.js.map" />
+    <Content Include="Styles\images\kendoui.ttf" />
+    <Content Include="Styles\images\kendoui.woff" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -32,6 +32,14 @@ namespace RepositoryAW
                     select p);
         }
 
+        public IQueryable<Product> GetProductByCategoryId(int catid)
+        {
+            return (from p in db.Products.Include("Category")
+                    where p.Category.CategoryID == catid
+                    select p);
+        }
+
+
         public IQueryable<Product> GetProductByName(string name)
         {
             return (from p in db.Products.Include("Category")

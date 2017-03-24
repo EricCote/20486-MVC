@@ -12,10 +12,12 @@
 
 <p>
     @Html.DropDownList("Filtre",
-                       (SelectList) ViewBag.ListCategories,
-                       new { @class= "form-control" })
+                       (SelectList)ViewBag.ListCategories,
+                       new { @class = "form-control" })
 
 </p>
+
+<div id="grid"></div>
 
 <table class="table">
     <tr>
@@ -34,35 +36,92 @@
         <th>
             @Html.DisplayNameFor(model => model.ListPrice)
         </th>
-       
+
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.Name)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ListPrice)
-        </td>
-        
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ProductID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ProductID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ProductID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ListPrice)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+            </td>
+        </tr>
+    }
 
 </table>
+
+@section scripts {
+    <script src="/scripts/kendo.all.min.js"></script>
+    <script>
+        $(function () {
+            $("#Filtre").change(function () {
+                $("#grid").kendoGrid({
+                    dataSource: {
+                        /*  type: "odata", */
+                        transport: {
+                            read: {
+                                // the remote service url
+                                url: "http://localhost:62115/api/products/" + $("#Filtre").val(),
+                                // the request type
+                                type: "get",
+                                // the data type of the returned result
+                                dataType: "json"
+                            }
+                        },/*
+                    pageSize: 20 */
+
+                    },
+
+
+                    height: 550,
+                    groupable: true,
+                    sortable: true,
+                    columns: [{
+                        field: "Id",
+                        title: "Id"
+                    }, {
+                        field: "Name",
+                        title: "Produit"
+                    }, {
+                        field: "Color",
+                        title: "Couleur"
+                    }, {
+                        field: "ListPrice",
+                        title: "Prix"
+                    }, {
+                        field: "Category",
+                        title: "Catégorie"
+                    }]
+                });  //du grid
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+}
