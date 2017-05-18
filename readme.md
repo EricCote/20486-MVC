@@ -4,7 +4,7 @@
 
 
 .NET Framework: 
-Composé de 2 choses:
+ComposÃ© de 2 choses:
 1. Ensemble de Librairies de programmation
 - XML
 - ADO.NET
@@ -16,16 +16,16 @@ Composé de 2 choses:
 - Windows Forms
 - LINQ-to-Objects
 
-2.  Environnement d'éxécution (Runtime)
+2.  Environnement d'Ã©xÃ©cution (Runtime)
 CLR   (Common Language Runtime)
 - Load Library
-- Gestion mémoire (garbage collection)
+- Gestion mÃ©moire (garbage collection)
 - JIT Compiler (Just in time)
 - interop
 - Thread
 - Exception
 - Type safety
-- Securité
+- SecuritÃ©
 - Base Class Library (BCL)
 - etc
 
@@ -37,27 +37,42 @@ CLR   (Common Language Runtime)
 	<td>1.0</td><td>2002</td><td>Lib + CLR</td>
  </tr>
 <tr>
-	<td>2.0</td><td>2003</td><td>Lib + CLR</td>
+	<td>1.1</td><td>2003</td><td>Lib + CLR</td>
  </tr>
-
-
+ <tr>
+	<td>2.0</td><td>2005</td><td>Lib + CLR</td>
+ </tr>
+ <tr>
+	<td>3.0</td><td>2006</td><td>Lib</td>
+ </tr>
+ <tr>
+	<td>3.5</td><td>2008</td><td>Lib</td>
+ </tr>
+ <tr>
+	<td>4.0</td><td>2010</td><td>Lib + CLR (Ã©crase 4.0)</td>
+ </tr><tr>
+	<td>4.5</td><td>2012</td><td>Lib + CLR (Ã©crase 4.0)</td>
+ </tr>
+ <tr>
+	<td>4.51</td><td>2013</td><td>Lib + CLR (Ã©crase 4.0)</td>
+ </tr>
+ <tr>
+	<td>4.6</td><td>2015</td><td>Lib + CLR (Ã©crase 4.0)</td>
+ </tr>
+ <tr>
+	<td>4.7</td><td>2017</td><td>Lib + CLR (Ã©crase 4.0)</td>
+ </tr>
+ 
 </table>
 
-1.0  | 2002 |     Lib + CLR
-1.1  | 2003 |    Lib + CLR
-2.0  | 2005 |    Lib + CLR
-3.0  | 2007 |   Lib
-3.5  | 2008 |   Lib
-4.0  | 2010 |   Lib + CLR
-4.5  | 2012 |   Lib + CLR  (écrase 4.0)
-4.6  | 2015 |   Lib + CLR  (Écrase 4.0)
 
-.NET Framework Core 1.0   CLR réinventé  2016
+
+.NET Framework Core 1.0   CLR rÃ©inventÃ©  2016
 Cross-platform (Windows, Mac, Linux, RasberryPi)
 Modulaire
 Open Source 
 
-- limité library
+- limitÃ© library
 - VS2017  et plus
 
 -------
@@ -68,9 +83,9 @@ ASP.NET Core 1.0 (MVC, Razor, Web Api, SignalR... MAIS pas de WebForms)
 -------------------------------------------
 
 
-ASP                1996    Basé sur VbScript
-ASP.NET WebForms   2002    Basé sur .NET, Abstraction Windows
-ASP.NET MVC        2009    Basé sur .NET, Abstraction Web
+ASP                1996    BasÃ© sur VbScript
+ASP.NET WebForms   2002    BasÃ© sur .NET, Abstraction Windows
+ASP.NET MVC        2009    BasÃ© sur .NET, Abstraction Web
 ASP.NET Web Pages (razor)  2011
 ASP.NET SignalR    2012
 ASP.NET Web API    2012
@@ -96,11 +111,11 @@ Javascript AJAX (serveur)
 -----------------------------------------------
 
 
-Modèle de programmation 
+ModÃ¨le de programmation 
 
-Règles de Routage Transforment des URL vers des appels
+RÃ¨gles de Routage Transforment des URL vers des appels
 ---   Controller (classe)
----   Action     (méthode)
+---   Action     (mÃ©thode)
  
 
 
@@ -124,25 +139,25 @@ etc
 # MVC  
 
 1. routage: 
-  a. décortique le url d'après les règles de routage
+  a. dÃ©cortique le url d'aprÃ¨s les rÃ¨gles de routage
   b. il obtient le "controller" et l'"action".
 2. MVC instancie le controller
-3. MVC détecte quelle est l'action et sa méthode attchée
-4. "Model binding" prépare les paramètres de la méthodes.
-    Il va chercher les valeurs des paramètres avec un mapping sur
-    -queryString  -Paramètres Post -cookie -Route
-5. On appelle la méthode avec le bon paramètre.
+3. MVC dÃ©tecte quelle est l'action et sa mÃ©thode attchÃ©e
+4. "Model binding" prÃ©pare les paramÃ¨tres de la mÃ©thodes.
+    Il va chercher les valeurs des paramÃ¨tres avec un mapping sur
+    -queryString  -ParamÃ¨tres Post -cookie -Route
+5. On appelle la mÃ©thode avec le bon paramÃ¨tre.
 ----
-6. La méthode du controller instancie un Modèle de données.
-7. Un modèle peut être n'importe quel objet simple ou complexe
-8. on créé une référence à un objet vue avec en paramètre le modèle
+6. La mÃ©thode du controller instancie un ModÃ¨le de donnÃ©es.
+7. Un modÃ¨le peut Ãªtre n'importe quel objet simple ou complexe
+8. on crÃ©Ã© une rÃ©fÃ©rence Ã  un objet vue avec en paramÃ¨tre le modÃ¨le
 -----
-9. MVC instancie l'engin de Vue avec la vue retournée par la méthode du controler
+9. MVC instancie l'engin de Vue avec la vue retournÃ©e par la mÃ©thode du controler
 -----
-10. L'engin razor génère le html et éxécute les commandes C# de la vue
-    la vue possède du C# très simple. 
+10. L'engin razor gÃ©nÃ¨re le html et Ã©xÃ©cute les commandes C# de la vue
+    la vue possÃ¨de du C# trÃ¨s simple. 
 -----
-11. retourne les données générées par la vue au navigateur. 
+11. retourne les donnÃ©es gÃ©nÃ©rÃ©es par la vue au navigateur. 
 12. On dispose du controller.
 
 
@@ -158,9 +173,9 @@ Startup.cs
 ----------------------------------------------------------
 # Data
 
-_ADO.NET_: ensemble de classes pour travailler avec les bases de données.
+_ADO.NET_: ensemble de classes pour travailler avec les bases de donnÃ©es.
 
-_ADO.NET Providers_: Classes pour travailler avec des BD spécifiques.
+_ADO.NET Providers_: Classes pour travailler avec des BD spÃ©cifiques.
          Connection
          DataReader
          Command
@@ -187,57 +202,57 @@ Plusieurs autres providers sont fournis par Tiers Partis
 
 # Entity Framework
 
-Entity Framework : Ensemble de classes qui permet de sérialiser
-                   nos données en Orienté Objet à travers du mapping
+Entity Framework : Ensemble de classes qui permet de sÃ©rialiser
+                   nos donnÃ©es en OrientÃ© Objet Ã  travers du mapping
 
-Il y a deux façons de créer le mapping:
-- Modèle xml de nos entités. (vieille façon)
-- avec du code c#. (code first) (nouvelle façon, compatible avec .NET Core)
+Il y a deux faÃ§ons de crÃ©er le mapping:
+- ModÃ¨le xml de nos entitÃ©s. (vieille faÃ§on)
+- avec du code c#. (code first) (nouvelle faÃ§on, compatible avec .NET Core)
 
 
-Pour aller chercher des données, on utilise des objets IQueryable
-(Compatibles avec LINQ.) Cela génère des requêtes SQL qui ne sont pas 
+Pour aller chercher des donnÃ©es, on utilise des objets IQueryable
+(Compatibles avec LINQ.) Cela gÃ©nÃ¨re des requÃªtes SQL qui ne sont pas 
 toujours optimales. 
 
 
--Eager loading: utiliser une méthode include pour aller chercher
-des données supplémentaires dans un join
+-Eager loading: utiliser une mÃ©thode include pour aller chercher
+des donnÃ©es supplÃ©mentaires dans un join
 
 -Lazy Loading:  On se connecte sur la BD au moment de travailler avec
-les données supplémentaires. Mauvais dans une boucle.
+les donnÃ©es supplÃ©mentaires. Mauvais dans une boucle.
 
 -----------
 
-Il est possible pour EF de générer des entitées à partir d'une BD.
-Il est possible pour EF de générer une BD à partir d'entitées
+Il est possible pour EF de gÃ©nÃ©rer des entitÃ©es Ã  partir d'une BD.
+Il est possible pour EF de gÃ©nÃ©rer une BD Ã  partir d'entitÃ©es
 
 
-Entitée: classe qui représente un enregistrement d'une table. 
+EntitÃ©e: classe qui reprÃ©sente un enregistrement d'une table. 
 
 
 ---------------
 
-Il y a deux façons de décrire nos entitées: Explicitement (attributs ou du Fluent API) ou implicitement (Conventions).
+Il y a deux faÃ§ons de dÃ©crire nos entitÃ©es: Explicitement (attributs ou du Fluent API) ou implicitement (Conventions).
 
 ----------------------------------------------
 
 Migration:  Technologie qui permet de synchroniser 
-le schéma de BD avec les entités d'un dbcontext du projet.
+le schÃ©ma de BD avec les entitÃ©s d'un dbcontext du projet.
 
 
-Ligne de commande powershell pour créer les migration.
+Ligne de commande powershell pour crÃ©er les migration.
 
-À chaque migration de créée, on ajoute une classe au projet.
+Ã€ chaque migration de crÃ©Ã©e, on ajoute une classe au projet.
 
 Pour activer les migrations, il faut utiliser 3 commandes:
 
-Enable-Migration: Créer la classe Configuration. Possiblement une migration initiale si la BD contient une table History.
+Enable-Migration: CrÃ©er la classe Configuration. Possiblement une migration initiale si la BD contient une table History.
 
-Add-Migration 'nom migration': Créer une migration. Possède deux méthodes:
-'Up' permet d'ajouter des structures et 'Down' permet de régresser ces structures.
+Add-Migration 'nom migration': CrÃ©er une migration. PossÃ¨de deux mÃ©thodes:
+'Up' permet d'ajouter des structures et 'Down' permet de rÃ©gresser ces structures.
 
-Update-Database : Permettre à une Bd de se mettre-à-jour ou de régresser.
-Il est possible de Mettre-à-jour en direct, ou de générer un script SQL.
+Update-Database : Permettre Ã  une Bd de se mettre-Ã -jour ou de rÃ©gresser.
+Il est possible de Mettre-Ã -jour en direct, ou de gÃ©nÃ©rer un script SQL.
 
 
 
@@ -245,41 +260,41 @@ Il est possible de Mettre-à-jour en direct, ou de générer un script SQL.
 
 CSS: Cascading Style Sheet.
 
-Cela définit un ensemble de règles pour formatter des éléments
+Cela dÃ©finit un ensemble de rÃ¨gles pour formatter des Ã©lÃ©ments
 
-On indique un sélecteur sur lequel on place les règles.
+On indique un sÃ©lecteur sur lequel on place les rÃ¨gles.
 ex: 
-- Nom d'élément (p, h1)
+- Nom d'Ã©lÃ©ment (p, h1)
 - Classe  (.classe .vert)
 - id    (#bouton #txtnom)
 
-On peut combiner les sélecteurs.
+On peut combiner les sÃ©lecteurs.
 
-On définit un enseble de règle pour checun des sélecteur.
-propriété: valeur
+On dÃ©finit un enseble de rÃ¨gle pour checun des sÃ©lecteur.
+propriÃ©tÃ©: valeur
 
-Le plus difficile, c'est l'ordre dans lequel les règles son appliquées. Il y a une méthode dans lequel les règles sont appilquées. (plus spécifique)
+Le plus difficile, c'est l'ordre dans lequel les rÃ¨gles son appliquÃ©es. Il y a une mÃ©thode dans lequel les rÃ¨gles sont appilquÃ©es. (plus spÃ©cifique)
 
 ---------------
 
 # Bootstrap
 
-Une librairie CSS qui permet de formatter la plupart des sites web dans un look propre, responsive, conçu pour les mobiles.
+Une librairie CSS qui permet de formatter la plupart des sites web dans un look propre, responsive, conÃ§u pour les mobiles.
 
 
 ---------------------
 
 
-Web API:  Technologie d'invocation à distance qui "remplace" WCF.  
+Web API:  Technologie d'invocation Ã  distance qui "remplace" WCF.  
 
-Choses uniques à WCF: Transactions, Resilience, Message Queuing, custom Encryption, message Encryption, federated authentication
+Choses uniques Ã  WCF: Transactions, Resilience, Message Queuing, custom Encryption, message Encryption, federated authentication
 
-Web API:  Encrypté HTTPS, identité gérées par des headers OAuth
+Web API:  EncryptÃ© HTTPS, identitÃ© gÃ©rÃ©es par des headers OAuth
 
 
 Messages qui utilisent HTTP + Approche REST + JSON
 
-REST: Un URL représente une ressource que l'on travaille avec un verbe HTTP
+REST: Un URL reprÃ©sente une ressource que l'on travaille avec un verbe HTTP
 GET     Read
 POST    Add
 PUT     Update
@@ -288,7 +303,7 @@ PATCH   Update Partiel
 HEAD
 OPTION
 
-JSON: Format de données Similaire à XML, 
+JSON: Format de donnÃ©es Similaire Ã  XML, 
       plus petit, plus simple, compatible avec Javascript
 
 
