@@ -67,33 +67,61 @@ CLR   (Common Language Runtime)
 
 
 
-.NET Framework Core 1.0   CLR réinventé  2016
-Cross-platform (Windows, Mac, Linux, RasberryPi)
-Modulaire
-Open Source 
-
+# .NET Framework Core 1.0   
+- CLR réinventé  2016
+- Cross-platform (Windows, Mac, Linux, RasberryPi)
+- Modulaire
+- Open Source 
+MAIS
 - limité library
 - VS2017  et plus
 
+<table>
+<tr>
+	<td>1.0</td><td>2016</td>
+ </tr>
+
+<tr>
+	<td>1.1</td><td>2016</td>
+</tr>
+<tr>
+	<td>2.0</td><td>2017</td>
+</tr>
+</table>
+
+
 -------
 
-ASP.NET Core 1.0 (MVC, Razor, Web Api, SignalR... MAIS pas de WebForms)
+# ASP.NET Core 1.0 
+Inclut MVC, Razor, Web Api, SignalR... MAIS pas de WebForms
 
 
 -------------------------------------------
 
 
-ASP                1996    Basé sur VbScript
-ASP.NET WebForms   2002    Basé sur .NET, Abstraction Windows
-ASP.NET MVC        2009    Basé sur .NET, Abstraction Web
-ASP.NET Web Pages (razor)  2011
-ASP.NET SignalR    2012
-ASP.NET Web API    2012
+<table>
+<tr>
+	<td>ASP </td><td>1996</td><td>Basé sur VbScript</td>
+ </tr>
+ <tr>
+	<td>ASP.NET WebForms</td><td>2002</td><td>Basé sur .NET, Abstraction Windows</td>
+ </tr>
+ <tr>
+	<td>ASP.NET MVC </td><td>2009</td><td>Basé sur .NET, Abstraction Web</td>
+ </tr><tr>
+	<td>ASP.NET WebPages (Razor) </td><td>2011</td><td>Syntaxe de markup simplifiée</td>
+ </tr><tr>
+	<td>ASP.NET Web API </td><td>2012</td><td>Remplace Web Services / WCF</td>
+ </tr><tr>
+	<td>ASP.NET Signal R </td><td>2013</td><td>Notifications</td>
+ </tr>
+ <tr>
+	<td>ASP.NET Core 1.0  </td><td>2016</td><td>Compatible .NET Famework Core</td>
+ </tr>
+ </Table>
 
-ASP.NET Core 1.0   2016
 
---------------------------------------------
-
+----------------
 
 
 
@@ -121,7 +149,7 @@ Règles de Routage Transforment des URL vers des appels
 
 
 
-
+--------------------------------
 
 
 
@@ -186,7 +214,7 @@ _ADO.NET Providers_: Classes pour travailler avec des BD spécifiques.
 - SqlClient
 - OleDb
 - Odbc
-- Oracle*  8
+- Oracle*  
 
 Plusieurs autres providers sont fournis par Tiers Partis 
    (MySql, Oracle, Db2, Postgre, etc.)
@@ -215,10 +243,10 @@ Pour aller chercher des données, on utilise des objets IQueryable
 toujours optimales. 
 
 
--Eager loading: utiliser une méthode include pour aller chercher
+- Eager loading: utiliser une méthode include pour aller chercher
 des données supplémentaires dans un join
 
--Lazy Loading:  On se connecte sur la BD au moment de travailler avec
+- Lazy Loading:  On se connecte sur la BD au moment de travailler avec
 les données supplémentaires. Mauvais dans une boucle.
 
 -----------
