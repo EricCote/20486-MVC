@@ -1,7 +1,7 @@
 # Documentation MVC
 
 ### .NET Framework: 
-Composé de 2 choses:
+#### Composé de 2 choses: 
 1. Ensemble de Librairies de programmation
 - XML
 - ADO.NET
@@ -117,46 +117,28 @@ Inclut MVC, Razor, Web Api, SignalR... MAIS pas de WebForms
  </tr>
  </Table>
 
-
-----------------
-
-
-
-
-
-Razor (Web Pages)
-Web Forms
-MVC
-
-JavaScript (client)
-Javascript AJAX (serveur)
-
-
-
 -----------------------------------------------
 
 
-Modèle de programmation 
+#### Modèle de programmation 
 
 Règles de Routage Transforment des URL vers des appels
----   Controller (classe)
----   Action     (méthode)
+- Controller (classe)
+- Action     (méthode)
  
-
-
-
+Le rôle de l'action est d'instancier un modèle et de l'attacher à une vue. 
 
 --------------------------------
 
 
 
 2 engins de vues
-Vues Razor (cshtml et vbhtml)
-Vues ASPX  (aspx et ascx)
+- Vues Razor (cshtml et vbhtml)
+- Vues ASPX  (aspx et ascx)
 
 Par des tiers partis 
-nhaml
-etc
+- nhaml
+- etc
 
 --------------------------------------
 
@@ -189,10 +171,10 @@ etc
 ---------------------------------------------------------
 
 
-Global.asax
+#### Global.asax
 - Application_Start
 
-Startup.cs
+#### Startup.cs
 
 
 ----------------------------------------------------------
@@ -216,7 +198,7 @@ _ADO.NET Providers_: Classes pour travailler avec des BD spécifiques.
 Plusieurs autres providers sont fournis par Tiers Partis 
    (MySql, Oracle, Db2, Postgre, etc.)
 
-- ADO.NET disconnected classes: simule une BD en objet
+- ADO.NET disconnected classes: simule une BD en objet (à éviter)
    - DataSet
    - DataTables
    - DataRows
@@ -231,14 +213,12 @@ Entity Framework : Ensemble de classes qui permet de sérialiser
                    nos données en Orienté Objet à travers du mapping
 
 Il y a deux façons de créer le mapping:
-- Modèle xml de nos entités. (vieille façon)
+- Modèle xml de nos entités. (fichier EDMX, vieille façon)
 - avec du code c#. (code first) (nouvelle façon, compatible avec .NET Core)
-
 
 Pour aller chercher des données, on utilise des objets IQueryable
 (Compatibles avec LINQ.) Cela génère des requêtes SQL qui ne sont pas 
 toujours optimales. 
-
 
 - Eager loading: utiliser une méthode include pour aller chercher
 des données supplémentaires dans un join
@@ -264,42 +244,40 @@ Il y a deux façons de décrire nos entitées: Explicitement (attributs ou du Fl
 Migration:  Technologie qui permet de synchroniser 
 le schéma de BD avec les entités d'un dbcontext du projet.
 
-
-Ligne de commande powershell pour créer les migration.
+On utilise une ligne de commande powershell pour créer les migration.
 
 À chaque migration de créée, on ajoute une classe au projet.
 
 Pour activer les migrations, il faut utiliser 3 commandes:
 
-Enable-Migration: Créer la classe Configuration. Possiblement une migration initiale si la BD contient une table History.
+`Enable-Migration` : Créer la classe Configuration. Possiblement une migration initiale si la BD contient une table History.
 
-Add-Migration 'nom migration': Créer une migration. Possède deux méthodes:
+`Add-Migration 'nom migration'` : Créer une migration. La classe générée possède deux méthodes:
 'Up' permet d'ajouter des structures et 'Down' permet de régresser ces structures.
 
-Update-Database : Permettre à une Bd de se mettre-à-jour ou de régresser.
+`Update-Database` : Permettre à une Bd de se mettre-à-jour ou de régresser.
 Il est possible de Mettre-à-jour en direct, ou de générer un script SQL.
 
 
 
 ----------------
 
-CSS: Cascading Style Sheet.
+# CSS: Cascading Style Sheet
 
 Cela définit un ensemble de règles pour formatter des éléments
 
-On indique un sélecteur sur lequel on place les règles.
+On indique un sélecteur sur lequel on place les règles. (il y en 3 types)
 ex: 
 - Nom d'élément (p, h1)
 - Classe  (.classe .vert)
 - id    (#bouton #txtnom)
 
-On peut combiner les sélecteurs.
+On peut combiner les sélecteurs, ce qui complexifie grandement les règles.
 
-On définit un enseble de règle pour checun des sélecteur.
-propriété: valeur
+On définit un ensemble de règles pour chacun des sélecteur.
+`propriété: valeur`
 
-Le plus difficile, c'est l'ordre dans lequel les règles son appliquées. Il y a une méthode dans lequel les règles sont appilquées. (plus spécifique)
-
+Le plus difficile, c'est l'ordre dans lequel les règles sont appliquées. Il y a une méthodologie pour appliquer les règles. ([plus d'infos] (https://en.wikipedia.org/wiki/Cascading_Style_Sheets) )
 ---------------
 
 # Bootstrap
@@ -310,14 +288,13 @@ Une librairie CSS qui permet de formatter la plupart des sites web dans un look 
 ---------------------
 
 
-Web API:  Technologie d'invocation à distance qui "remplace" WCF.  
+**Web API**:  Technologie d'invocation à distance qui "remplace" WCF.  
 
-Choses uniques à WCF: Transactions, Resilience, Message Queuing, custom Encryption, message Encryption, federated authentication
+**Choses uniques à WCF*: Transactions, Resilience, Message Queuing, custom Encryption, message Encryption, federated authentication
 
-Web API:  Encrypté HTTPS, identité gérées par des headers OAuth
+**Web API*:  Encrypté HTTPS, identité gérées par des headers OAuth
 
-
-Messages qui utilisent HTTP + Approche REST + JSON
+Messages utilisent HTTP + Approche REST + JSON
 
 REST: Un URL représente une ressource que l'on travaille avec un verbe HTTP
 GET     Read
@@ -330,17 +307,3 @@ OPTION
 
 JSON: Format de données Similaire à XML, 
       plus petit, plus simple, compatible avec Javascript
-
-
-
-	  https://downloads.cdn.telerik.com/2d31863be6ea2629f01d7b7c5b1819f9_telerik.kendoui.professional.2017.1.223.trial.zip_2017.1.223?Expires=1490454081&Signature=sA~IK-RPqkoMhpPHcmUYLWchnHzmaiYSJCqZcjmfW1IDGlRJyCr3um1abSGNBKNommnQiLPleINyn-pKYhpi7gbmAhQ1F~BLoDg8Inz8rrVPUwIsl65lp1HtOeZzrS2SWjzsvQZk1m0cXJh1TjeCe1I7Au96r5hwmg6FlQMjli2DT7uWyOROZDOsBhZuxf5OD~o1eDGks8LZQxr4l8-7q2DBfcGNb5ekgiPIQLzBLu2umjyqtdAvvrmiFnBI7vXL~MtRUl~6vTDcXX-xQsYcqeuFqabB1b86WmGNoKzyNx1YNFRjUGekznwUgVFafyGjI2uhs3z2~Su-ujFvJuJV5g__&Key-Pair-Id=APKAJILH73OFECZJOO3Q
-
-
-
-
-    
-
-
-
-
-
