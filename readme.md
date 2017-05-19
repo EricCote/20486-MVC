@@ -199,8 +199,7 @@ Plusieurs autres providers sont fournis par Tiers Partis
    (MySql, Oracle, Db2, Postgre, etc.)
 
 - ADO.NET disconnected classes: simule une BD en objet (à éviter)
-   - DataSet
-   - DataTables
+   - DataSet   - DataTables
    - DataRows
    - DataColumns
    - Constraints
@@ -211,7 +210,6 @@ Plusieurs autres providers sont fournis par Tiers Partis
 
 Entity Framework : Ensemble de classes qui permet de sérialiser
                    nos données en Orienté Objet à travers du mapping
-
 Il y a deux façons de créer le mapping:
 - Modèle xml de nos entités. (fichier EDMX, vieille façon)
 - avec du code c#. (code first) (nouvelle façon, compatible avec .NET Core)
@@ -222,7 +220,6 @@ toujours optimales.
 
 - Eager loading: utiliser une méthode include pour aller chercher
 des données supplémentaires dans un join
-
 - Lazy Loading:  On se connecte sur la BD au moment de travailler avec
 les données supplémentaires. Mauvais dans une boucle.
 
@@ -234,7 +231,6 @@ Il est possible pour EF de générer une BD à partir d'entitées
 
 Entitée: classe qui représente un enregistrement d'une table. 
 
-
 ---------------
 
 Il y a deux façons de décrire nos entitées: Explicitement (attributs ou du Fluent API) ou implicitement (Conventions).
@@ -243,7 +239,6 @@ Il y a deux façons de décrire nos entitées: Explicitement (attributs ou du Fl
 
 Migration:  Technologie qui permet de synchroniser 
 le schéma de BD avec les entités d'un dbcontext du projet.
-
 On utilise une ligne de commande powershell pour créer les migration.
 
 À chaque migration de créée, on ajoute une classe au projet.
@@ -257,7 +252,6 @@ Pour activer les migrations, il faut utiliser 3 commandes:
 
 `Update-Database` : Permettre à une Bd de se mettre-à-jour ou de régresser.
 Il est possible de Mettre-à-jour en direct, ou de générer un script SQL.
-
 
 
 ----------------
@@ -277,7 +271,8 @@ On peut combiner les sélecteurs, ce qui complexifie grandement les règles.
 On définit un ensemble de règles pour chacun des sélecteur.
 `propriété: valeur`
 
-Le plus difficile, c'est l'ordre dans lequel les règles sont appliquées. Il y a une méthodologie pour appliquer les règles. ([plus d'infos] (https://en.wikipedia.org/wiki/Cascading_Style_Sheets) )
+Le plus difficile, c'est l'ordre dans lequel les règles sont appliquées. Il y a une méthodologie pour appliquer les règles. https://en.wikipedia.org/wiki/Cascading_Style_Sheets
+
 ---------------
 
 # Bootstrap
@@ -290,13 +285,13 @@ Une librairie CSS qui permet de formatter la plupart des sites web dans un look 
 
 **Web API**:  Technologie d'invocation à distance qui "remplace" WCF.  
 
-**Choses uniques à WCF*: Transactions, Resilience, Message Queuing, custom Encryption, message Encryption, federated authentication
+**Choses uniques à WCF**: Transactions, Resilience, Message Queuing, custom Encryption, message Encryption, federated authentication
 
-**Web API*:  Encrypté HTTPS, identité gérées par des headers OAuth
+**Web API**:  Encrypté HTTPS, identité gérées par des headers OAuth
 
 Messages utilisent HTTP + Approche REST + JSON
 
-REST: Un URL représente une ressource que l'on travaille avec un verbe HTTP
+**REST**: Un URL représente une ressource que l'on travaille avec un verbe HTTP
 GET     Read
 POST    Add
 PUT     Update
