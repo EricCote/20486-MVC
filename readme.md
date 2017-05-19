@@ -292,13 +292,12 @@ Une librairie CSS qui permet de formatter la plupart des sites web dans un look 
 Messages utilisent HTTP + Approche REST + JSON
 
 **REST**: Un URL représente une ressource que l'on travaille avec un verbe HTTP
-GET     Read
-POST    Add
-PUT     Update
-DELETE  Delete
-PATCH   Update Partiel
-HEAD
-OPTION
+- GET     Read
+- POST    Add
+- PUT     Update
+- DELETE  Delete
+- PATCH   Update Partiel
+- HEAD
+- OPTION
 
-JSON: Format de données Similaire à XML, 
-      plus petit, plus simple, compatible avec Javascript
+**JSON**: Format de données Similaire à XML, plus petit, plus simple, compatible avec Javascript
