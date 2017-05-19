@@ -1,9 +1,6 @@
+# Documentation MVC
 
-# documentation MVC
-
-
-
-.NET Framework: 
+### .NET Framework: 
 Composé de 2 choses:
 1. Ensemble de Librairies de programmation
 - XML
